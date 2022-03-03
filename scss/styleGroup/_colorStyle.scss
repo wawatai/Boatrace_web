@@ -1,0 +1,472 @@
+$backgroundColor_1: #ffffff;
+$backgroundColor_2: #0069d5;
+$backgroundColor_3: #3789de;
+$backgroundColor_4: #003f97;
+$backgroundColor_5: #0000002e;
+$backgroundColor_6: #cacfd3;
+$backgroundColor_7: #eef2f5;
+$backgroundColor_8: #dbf3ff;
+$backgroundColor_9: #00000087;
+$backgroundColor_10: #e4e4e4;
+$backgroundColor_11: #f17a20;
+$backgroundColor_12: #a6e526;
+$backgroundColor_13: #eef2f5;
+
+$fontColor_1: #ffffff;
+$fontColor_2: #959595;
+$fontColor_3: #0069d5;
+$fontColor_4: #555555;
+$fontColor_5: #666c75;
+$fontColor_6: #2c3138;
+$fontColor_7: #4c5159;
+$fontColor_8: #a6e526;
+$fontColor_9: #f3821f;
+$fontColor_10: #5f5f5f;
+$fontColor_11: #f54040;
+$fontColor_12: #ff8d68;
+$fontColor_13: #00a99d;
+$fontColor_14: #55aaff;
+$fontColor_14: #003f97;
+
+$borderColor_1: #0069d5;
+$borderColor_2: #d5d6d7;
+$borderColor_3: #62a5eb;
+$borderColor_4: #b3b3b3;
+$borderColor_5: #ffffff;
+$borderColor_7: #b3b3b3;
+$borderColor_8: #e11515;
+$borderColor_9: #cca172;
+
+$boxShadow_1: #8a000080;
+$boxShadow_2: #c0c0c0;
+$boxShadow_3: #00000033;
+
+$linear_1: linear-gradient(120deg,#4f9ff1,#0069d5 50%,#5dacfd);
+$linear_2: linear-gradient(120deg, #ffffff 0%, #d5d5d5 100%);
+
+///////button
+
+
+//登入
+@mixin buttonStyle_1 {
+    background: linear-gradient(180deg,#9bd722 0,#99d420 45%,#8fc819 99%);
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 10px;
+    box-shadow: 0 1px 4px #00000042;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(0deg,#9bd722 0,#99d420 45%,#8fc819 99%);
+    }
+}
+//註冊
+@mixin buttonStyle_2 {
+    background:linear-gradient(180deg,#41bef2 0,#36b7ed 45%,#29afe6 99%);
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 10px;
+    box-shadow: 0 1px 4px #00000042;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(0deg,#41bef2 0,#36b7ed 45%,#29afe6 99%);
+    }
+}
+
+//常用漸層按鈕1有導圓角
+@mixin buttonStyle_3 {
+    background: linear-gradient(180deg,#9bd722 0,#99d420 45%,#8fc819 99%);
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(180deg,#ee6128 0,#f07422 45%,#f07422 99%);
+    }
+}
+
+//登出按鈕
+@mixin buttonStyle_3-2 {
+    background: linear-gradient(180deg,#9bd722 0,#99d420 45%,#8fc819 99%);
+    border-radius: 2px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(180deg,#8fc819 0,#99d420 45%, #9bd722 99%);
+    }
+}
+
+//常用漸層按鈕2有導圓角
+@mixin buttonStyle_4 {
+    background: linear-gradient(180deg,#f3861e 0,#f07422 60%,#ee6128);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(180deg,#9bd722 0,#99d420 45%,#8fc819 99%);
+    }
+}
+
+
+//常用漸層按鈕2無導圓角
+@mixin buttonStyle_4_2 {
+    background: linear-gradient(180deg,#f3861e 0,#f07422 60%,#ee6128);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(180deg,#0069d5 0,#157eea 99%);
+    }
+}
+
+//優惠頁查看活動
+@mixin buttonStyle_5 {
+    background: #003f97;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #ffffff;
+        border: 1px solid #d5d6d7;
+        border-bottom: none;
+        color: #0069d5;
+        box-shadow: 0 0 0 1px #ffffff;
+    }
+}
+
+@mixin buttonStyle_6 {
+    background:linear-gradient(0deg,#e6eaed 0,#f9f9f9);
+    color: #5f5f5f;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #e3e3e3;
+
+    &:hover,&:active,&.active {
+        background:#0069d5;
+        color: #ffffff;
+    }
+}
+
+//站內信已讀按鈕
+@mixin buttonStyle_7 {
+    background:linear-gradient(0deg,#e6eaed 0,#f9f9f9);
+    border: 1px solid #e3e3e3;
+    color: #2ca459;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+//站內信編輯按鈕
+@mixin buttonStyle_7_1 {
+    background:linear-gradient(0deg,#e6eaed 0,#f9f9f9);
+    border: 1px solid #e3e3e3;
+    color: #f17a20;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+//轉存提小按鈕
+@mixin buttonStyle_9 {
+    background: #fcf3f1;
+    border: solid 1px #ff766f;
+    color: #e11515;
+    border-radius: 50%;
+    font-size: 21px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #e11515;
+        color: #ffffff;
+    }
+}
+//無背景單框按鈕
+@mixin buttonStyle_8 {
+    padding: 0 10px;
+    background: none;
+    border: solid 1px #cca172;
+    border-radius: 3px;
+    color: #cca172;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    &:hover,&:active,&.active {
+        opacity: 0.8;
+    }
+}
+//我的錢包-轉入中心錢包
+@mixin  buttonStyle_8_2 {
+    background: #ffffff;
+    border: solid 1px #e11515;
+    border-radius: 3px;
+    color: #e11515;
+
+    &:hover,&:active,&.active {
+        
+    }
+}
+//頁籤式按鈕
+@mixin buttonStyle_9 {
+    background: #999999;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: #ce1515;
+    }
+}
+//存款頁上方選單
+@mixin buttonStyle_10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #cccccc;
+    border-radius: 3px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: #e11515;
+        color: #ffffff;
+        border-color: transparent;
+    }
+}
+//選擇時間+選擇金額
+@mixin buttonStyle_11 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    background: linear-gradient(to bottom,#ffffff 40%,#f4f4f4 100%);
+    border: solid 1px #e8e8e8;
+    border-radius: 3px;
+    letter-spacing: 1px;
+
+    &:hover,&:active,&.active {
+        background: #e11515;
+        color: #ffffff;
+    }
+}
+//站內信編輯按鈕+其他按鈕
+@mixin buttonStyle_12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #333333;
+    border: solid 1px #e6e6e6;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover,&:active,&.active {
+        background: #e11515;
+        color: #ffffff;
+    }
+}
+@mixin buttonStyle_12_3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #4cb816;
+    border: solid 1px #4cb816;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover,&:active,&.active {
+        opacity: 0.8;
+    }
+}
+@mixin buttonStyle_12_4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #ed1c24;
+    border: solid 1px #ed1c24;
+    background: none;
+    border-radius: 3px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover,&:active,&.active {
+        background: none;
+        opacity: 0.8;
+    }
+}
+//優惠-申請提領+查看活動
+@mixin buttonStyle_13 {
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #f17a20;
+    border: solid 1px #f17a20;
+
+    &:hover,&:active,&.active {
+
+    }
+}
+@mixin buttonStyle_13_2 {
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #557bff;
+    border: solid 1px #557bff;
+
+    &:hover,&:active,&.active {
+        
+    }
+}
+
+button:disabled {
+    background: #ccc!important;
+    border: none!important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
+}
+
+
+////////input
+
+
+@mixin inputStyle_1 {
+    border: solid 1px #b3b3b3;
+    background: #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+
+    &::-webkit-input-placeholder {
+        color: #b3cae3;
+    }
+}
+@mixin inputStyle_2 {
+    border: solid 1px #b3b3b3;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 0 0 0 52px;
+    font-size: 16px;
+    font-weight: bold;
+
+    &::-webkit-input-placeholder {
+        color: #b3cae3;
+    }
+}
+
+
+
+@mixin inputStyle_3 {
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: solid 1px #b3b3b3;
+    border-radius: 3px;
+    font-size: 14px;
+    background: #eef2f5;
+    color: #5f5f5f;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+input:disabled {
+    background: #fafafa !important;
+    color: #5f6368 !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+}
+input:read-only {
+    background: #eef2f5 !important;
+    border: 1px solid #b3b3b3 !important;
+    border-radius: 5px !important;
+    color: #5f6368 !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+
+///////select
+
+
+@mixin langStyle {
+    background: none;
+    border: none;
+    color: #5f6368;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #cecece;
+    padding: 2px;
+
+    option {
+        background: #ffffff;
+        color: #333333;
+    }
+}
+@mixin selectStyle_1 {
+    border-radius: 3px;
+    border: solid 1px #b3b3b3;
+    background-color: #eef2f5;
+    padding-left: 16px;
+    background-image: linear-gradient(45deg,transparent 50%,#0069d5 0),linear-gradient(135deg,#0069d5 50%,transparent 0);
+    background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px,5px 5px;
+    background-repeat: no-repeat;
+    appearance: none;
+    color: #5f5f5f;
+    font-size: 14px;
+    font-weight: bold;
+
+    option {
+        background: #ffffff;
+        color: #000000;
+    }
+}

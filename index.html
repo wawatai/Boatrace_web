@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./js/javascript.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <span class="brad"></span>
+            <ul class="user login">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password"class="password_0" placeholder="パスワード">
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                        <div class="forget-box">
+                            <i class="forget"></i>
+                            <div class=" forget-password"> パスワードをお忘れの方 </div>
+                        </div>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./html/deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./html/withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./html/member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./html/mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='./index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="./images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu active" onclick="window.location.href='./index.html'"> ホーム </li>
+                    <li class="saleBtn" onclick="window.location.href='./html/event.html'"> プロモーション </li>
+                    <li class="vipBtn" onclick="window.location.href='./html/vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="unlogin()"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="main-bg">
+            <div class="marqueeArea">
+                <div class="center">
+                    <div class="marqueeWrap">
+                        <i class="marquee_ic"></i>
+                        <div class="marquee">
+                            <pre>
+                                <p>読売新聞社杯　全日本王座決定戦　開設６９周年記念</p>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="left-side">
+                <div class="ad">
+                    <ul class="single-item">
+                        <li><img src="./images/banner.png"></li>
+                        <li><img src="./images/banner.png"></li>
+                        <li><img src="./images/banner.png"></li>
+                    </ul>
+                </div>
+                <a href="#" class="centerLink"></a>
+            </section>
+            <section class="right-side">
+                <div class="home">
+                    <div class="center-wrap">
+                        <div class="list-wrap">
+                            <div class="timelist">
+                                <button class="goLeft"></button>
+                                <button class="goRight"></button>
+                                <span>2022年1月20日のレース</span>
+                            </div>
+                            <ul class="type_list">
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        桐生
+                                    </p>
+                                    <p>最終日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        戶田
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        江戶川
+                                    </p>
+                                    <p>4日目</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        平和島
+                                    </p>
+                                    <p>2日目</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        多磨川
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        浜名湖 
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        蒲郡
+                                    </p>
+                                    <p>最終日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        常華
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        津
+                                    </p>
+                                    <p>5日目</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        三国 
+                                    </p>
+                                    <p>初日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        びわこ 
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        住之江
+                                    </p>
+                                    <p>最終日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        尼崎
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        鳴門
+                                    </p>
+                                    <p>初日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        丸龜
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        児島 
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        宮島
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        德山
+                                    </p>
+                                    <p>4日目</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        下関
+                                    </p>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        若松
+                                    </p>
+                                    <p>2日目</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        芦屋 
+                                    </p>
+                                    <p>最終日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <p class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        福岡
+                                    </p>
+                                    <p>最終日</p>
+                                </li>
+                                <li class="cliclable">
+                                    <div class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        唐津
+                                    </div>
+                                    <p>-</p>
+                                </li>
+                                <li class="cliclable">
+                                    <div class="seriesN">
+                                        <span class="leagueName"></span>
+                                        <span class="seriesType"></span>
+                                        大村
+                                    </div>
+                                    <p>初日</p>
+                                </li>
+                            </ul>
+                            <div class="remindbox">
+                                <div>
+                                    <p>
+                                        <span class="morning"></span>
+                                        モーニング
+                                    </p>
+                                    <p>
+                                        <span class="afternoon"></span>
+                                        サマータイム
+                                    </p>
+                                    <p>
+                                        <span class="night"></span>
+                                        ナイター
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <span class="noob"></span>
+                                        ルーキーシリーズ
+                                    </p>
+                                    <p>
+                                        <span class="girl"></span>
+                                        オールレディース
+                                    </p>
+                                    <p>
+                                        <span class="gold"></span>
+                                        ヴィーナスシリーズ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" a href="#"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='./html/vip.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='./html/help.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='./html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='./html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 無断転載禁止 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow forgetPassword">
+            <div class="title">
+                <p>パスワードをお忘れの方</p>
+                <i class="close_ic"></i>
+            </div>
+            <form>
+                <input type="text" placeholder="携帯番号を入力してください">
+                <button>バスワード変更</button>
+                <p>携帯電話に新しいパスワードをお送りしますので、</p>
+                <span>ショートメールをご確認ください</span>
+            </form>
+        </div>
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="jumpWindow loginWIndow">
+            <div class="title">
+                <p> ヒント </p>
+                <i class="close_ic"></i>
+            </div>
+            <form>
+                <p>先にログインください</p>
+                <button class="close" type="button">確認</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

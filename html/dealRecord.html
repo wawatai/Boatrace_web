@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <header>
+        <div class="top">
+            <span class="brad">
+                TONG BOU
+                <span class="time"></span>
+            </span>
+            <ul class="user userInfo">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password"class="password_0" placeholder="パスワード">
+                            <i class="forget"></i>
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="../images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu" onclick="window.location.href='../index.html'"> ホーム </li>
+                    <li class="saleBtn" onclick="window.location.href='../html/event.html'"> プロモーション </li>
+                    <li class="vipBtn" onclick="window.location.href='../html/vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="unlogin()"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="innerPage">
+            <div class="marqueeArea">
+                <div class="center">
+                    <div class="marqueeWrap">
+                        <i class="marquee_ic"></i>
+                        <div class="marquee">
+                            <pre>
+                                <p>読売新聞社杯　全日本王座決定戦　開設６９周年記念</p>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <aside class="innerSide">
+                    <div class="userInfo">
+                        <div>
+                            <p class="account">
+                                bbb123
+                                <span class="lv">VIP20</span>
+                            </p>
+                            <p class="days">參加45日</p>
+                            <ul class="quickSelect">
+                                <li onclick="window.location.href='./deposit.html'">
+                                    <p class="btn">入</p>
+                                    <span>入金</span>
+                                </li>
+                                <li onclick="window.location.href='./withdrawal.html'">
+                                    <p class="btn">出</p>
+                                    <span>出金</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="innerNav">
+                        <li onclick="window.location.href='./member.html'">
+                            <i class="user_ic"></i>
+                            個人情報
+                        </li>
+                        <li onclick="window.location.href='./vip.html'">
+                            <i class="vip_ic"></i>
+                            VIPメンバー
+                        </li>
+                        <li onclick="window.location.href='./wallet.html'">
+                            <i class="wallet_ic"></i>
+                            マイウォレット
+                        </li>
+                        <li onclick="window.location.href='./bankCard.html'">
+                            <i class="card_ic"></i>
+                            銀行口座
+                        </li>
+                        <li  class="active" onclick="window.location.href='./dealRecord.html'">
+                            <i class="dealRecord_ic"></i>
+                            取引履歷
+                        </li>
+                        <li onclick="window.location.href='./eventApply.html'">
+                            <i class="event_ic"></i>
+                            プロモーション申請
+                        </li>
+                        <li onclick="window.location.href='./mail.html'">
+                            <i class="mail_ic"></i>
+                            インボックス
+                        </li>
+                    </ul>
+                </aside>
+                <section>
+                    <div class="dealWrap">
+                        <div class="top"> 取引履歷 </div>
+                        <div class="bottom">
+                            <div class="header">
+                                <ul class="tabs">
+                                    <li class="active">取引履歷</li>
+                                    <li class=""> ベット額履歴 </li>
+                                </ul>
+                            </div>
+                            <div class="dealBox display">
+                                <div class="reviewWrap1">
+                                    <div class="search">
+                                        <form>
+                                            <div class="bigBox">
+                                                <div class="innerBox">
+                                                    <div class="row">
+                                                        <div class="smallTitle">タイプ</div>
+                                                        <div class="inputBox">
+                                                            <select>
+                                                                <option>存款</option>
+                                                                <option>提款</option>
+                                                                <option>轉帳/活動錢包</option>
+                                                                <option>反水/紅利</option>
+                                                                <option>活動錢包購買紀錄</option>
+                                                                <option>其它</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="smallTitle">日付</div>
+                                                        <div class="inputBox">
+                                                            <input type="date">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btnBox">
+                                                <button>昨日</button>
+                                                <button class="active">今日</button>
+                                                <button>今週</button>
+                                                <button>今月</button>
+                                            </div>
+                                            <div class="checkBtn">
+                                                <button> 検索 </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="fakeTable">
+                                        <table>
+                                            <tr>
+                                                <th>時間</th>
+                                                <th>ステータス</th>
+                                                <th>金額</th>
+                                                <th>備考</th>
+                                            </tr>
+                                            <tr>
+                                                <td>2022-01-06 10:16:52</td>
+                                                <td>人工的な増加</td>
+                                                <td>5000.00</td>
+                                                <td>テスト機能</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2022-01-06 10:16:52</td>
+                                                <td>金額変更</td>
+                                                <td>1000.00</td>
+                                                <td>保存された値</td>
+                                            </tr>
+                                        </table>
+                                        <p class="noData">目前無資料</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dealBox2">
+                                <div class="reviewWrap1">
+                                    <div class="fakeTable">
+                                        <span>ベット額履歴</span>
+                                        <table>
+                                            <tr>
+                                                <th>番号</th>
+                                                <th>ステータス</th>
+                                                <th>金額</th>
+                                                <th>ベット額制限</th>
+                                                <th>ベット額変化</th>
+                                                <th>ロック日</th>
+                                                <th>買い戻すを見る</th>
+                                                <th>ベットスリップを見る</th>
+                                                <th>備考</th>
+                                            </tr>
+                                            <tr>
+                                                <td>164128280144335</td>
+                                                <td>第三者決済</td>
+                                                <td>10.0000</td>
+                                                <td>10.0000</td>
+                                                <td>10.0000</td>
+                                                <td>2022-01-04 15:53:21</td>
+                                                <td>
+                                                    <button class="d-btn"> 買い戻すを見る </td>
+                                                </td>
+                                                <td>
+                                                      <button class="b-btn">  ベットスリップ  </td>
+                                                </td>   
+                                                <td>
+                                                    <i class="disabled">
+                                                        ﹀  
+                                                   </i>
+                                                </td>                                               
+                                            </tr>
+                                            <tr>
+                                                <td>164128280144335</td>
+                                                <td>クォータ増加</td>
+                                                <td>1.0000</td>
+                                                <td>10.0000</td>
+                                                <td>10.0000</td>
+                                                <td>2022-01-04 15:53:21</td>
+                                                <td>
+                                                    <button class="d-btn"> 買い戻すを見る </td>
+                                                </td>
+                                                <td>
+                                                      <button class="b-btn">  ベットスリップ  </td>
+                                                </td>
+                                                <td>
+                                                    <i>
+                                                        ﹀  
+                                                   </i>
+                                                </td>   
+                                            </tr>
+                                        </table>
+                                        <p class="noData">目前無資料</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" onclick="window.location.href='./html/help.html'"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='../html/event.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='../html/vip.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 無断転載禁止 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow betWindow sportGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">36588</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow liveGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">ALLBET</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>歐博真人</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow liveGame02">
+            <i class="close_ic"></i>
+            <div class="betTitle">WM</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>WM真人</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow lotteryGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">SG</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>SG彩票</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow lotteryGame02">
+            <i class="close_ic"></i>
+            <div class="betTitle">GS</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>GS彩票</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow slotGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">老虎機</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow fishGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">捕魚機</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow boardGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">棋牌遊戲</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>鳳凰棋牌</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+.sideBar {
+
+    .download {
+        position: fixed;
+        left: 5px;
+        top: 240px;
+        width: 24px;
+        height: 163px;
+        font-size: 20px;
+        padding: 28px 10px 0 12px;
+        color: $backgroundColor_1;
+        writing-mode: vertical-lr;
+        background: $backgroundColor_4;
+        outline: none;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: $backgroundColor_4 transparent;
+            border-style: solid;
+            bottom: -20px;
+            border-width: 20px 23px 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-color: $backgroundColor_4 transparent;
+            border-style: solid;
+            top: -20px;
+            border-width: 0 23px 20px;
+        }
+
+        i {
+            display: block;
+            width: 23px;
+            height: 25px;
+            // background: url(resources/download.bc5cd3b….png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+    }
+
+    .rightSide {
+        position: fixed;
+        right: 5px;
+        top: 200px;
+        z-index: 1;
+        width: 60px;
+        height: auto;
+        padding: 15px 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: #0069d5;
+            transform: rotate(45deg);
+            margin-bottom: 25px;
+            cursor: pointer;
+
+            i {
+                width: 30px;
+                height: 30px;
+                transform: rotate(-42deg);
+            }
+        }
+    }
+}

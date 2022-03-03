@@ -1,0 +1,234 @@
+.eventWrap {
+
+    .eventTitle {
+        height: 220px;
+        display: flex;
+    
+        p {
+            font-size: 38px;
+            color: $fontColor_1;
+            font-weight: bold;
+            text-align: center;
+            line-height: 220px;
+            width: 100%;
+        }
+    }
+    
+    .eventBody {
+        width: 1400px;
+        height: auto;
+        min-height: 350px;
+        padding: 28px 0 56px;
+        margin: 0 auto;
+        display: flex;
+
+        .side {
+            width: 357px;
+            margin-right: 13px;
+            height: auto;
+            background: $backgroundColor_1;
+            border: 1px solid $borderColor_2;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $borderColor_2;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover,&:active,&.active {
+                        background: $backgroundColor_10;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 3px;
+                            height: 100%;
+                            left: 0px;
+                            top: 0px;
+                            background: $backgroundColor_2;
+                        }
+                    }
+
+                    i {
+                        display: block;
+                        width: 23px;
+                        height: 23px;
+                        margin: 0 28px;
+                    }
+
+                    span {
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: $fontColor_3;
+                    }
+                }
+            }
+        }
+
+        .eventList {
+            display: none;
+            width: 1028px;
+
+            &.display {
+                display: block;
+            }
+
+            .eventBox {
+                background: $backgroundColor_1;
+                border-bottom: solid 1px $borderColor_2;
+                display: flex;
+                margin-bottom: 20px;
+                color: $fontColor_3;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                ul {
+                    width: 252px;
+                    min-height: 149px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 30px 27px;
+
+                    .title {
+                        font-size: 29px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .disabled {
+                        background: $backgroundColor_6 !important;
+                        cursor: not-allowed !important;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+
+                        button {
+                            width: 117px;
+                            height: 37px;
+                            @include buttonStyle_3-2;
+                        }
+                    }
+                }
+            }
+        }
+
+        .eventDetail {
+            display: none;
+            width: 1028px;
+            background: $backgroundColor_1;
+            border: solid 1px $borderColor_2;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                padding: 22px 40px 18px;
+
+                p {
+                    font-size: 34px;
+                    font-weight: bold;
+                    color: $fontColor_3;
+                }
+
+                button {
+                    width: 170px;
+                    height: 36px;
+                    margin-top: 18px;
+                    @include buttonStyle_3-2;
+
+                    i {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 10px -2px 0;
+                    }
+                }
+            }
+
+            .date {
+                margin: 0 40px;
+                padding: 28px 0 30px;
+                display: flex;
+                flex-direction: column;
+                border-bottom: solid 1px $borderColor_2;
+
+                span {
+                    color: $fontColor_3;
+                    font-size: 20px;
+
+                    &.dateTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 28px;
+                    }
+                }
+            }
+
+            .info {
+                padding: 25px 40px;
+                
+                p {
+                    font-size: 16px;
+                    color: $fontColor_3;
+
+                    &.infoTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            .detailFooter {
+                width: 100%;
+                height: 130px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+
+    .pagebox {
+        width: auto;
+        height: 40px;
+        left: 0;
+
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 115px;
+            
+        }
+            
+        ul.pagination li { display: inline; }
+            
+        ul.pagination li a {
+            color: $fontColor_3;
+            padding: 8px 8px;
+            text-decoration: none;
+
+            &.active {
+                background:$backgroundColor_2;
+                color: $fontColor_1;
+                border-radius: 5px;
+            }
+        }
+    }
+}

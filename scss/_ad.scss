@@ -1,0 +1,354 @@
+main {  
+    width: 100%;
+    height: auto;
+    // position: relative;
+
+    .main-bg {
+        width: 1200px;
+        height: 735px;
+        margin: auto;
+        padding: 0 0 48px 0;
+
+          //跑馬燈
+        .marqueeArea {
+            width: 1200px;
+            height: 40px;
+            position: absolute;
+            margin: 15px auto 0;
+
+            .center {
+                width: 100%;
+                height: 100%;
+                border: 1px solid $backgroundColor_2;
+                border-radius: 30px;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                background: $backgroundColor_1;
+                padding: 0 10px 0 40px;
+                box-sizing: border-box;
+
+                .marqueeWrap {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .marquee_ic {
+                        width: 30px;
+                        height: 30px;
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 6px;
+                        transform: translateY(-50%);
+                        color: transparent;
+                        pointer-events: none;
+                        user-select: none;
+                        z-index: 2;
+                        background-size: 100%;
+                    }
+
+                    .marquee {
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+
+                        pre {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            animation: marquee 30s linear infinite;
+                            padding-left: 100%;
+
+                            p {
+                                width: 100%;
+                                font-size: 17px;
+                                color: $fontColor_3;
+                                font-weight: 700;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                            }
+                        }
+
+                        @keyframes marquee {
+                            0% {
+                                transform: translate(0%);
+                            }
+
+                            100% {
+                                transform: translate(-100%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .left-side {
+            width: calc(50% - 10px);
+            height: auto;
+            border: 1px solid $borderColor_2;
+            display: inline-block;
+            margin-top: 72px;
+            box-sizing: border-box;
+            float: left;
+            background: $backgroundColor_1;
+        
+            .ad {
+                width: calc(50% - 10px);
+                min-width: 590px;
+                height: 320px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                background: #eeeeee;
+            
+                .single-item {
+                    margin: 0;
+            
+                    .slick-slide {
+                        outline: none;
+                    }
+            
+                    button {
+                        z-index: 1;
+                        width: 60px;
+                        height: 65px;
+                        top: 352px;
+
+                        &:hover,&:active,&.active {
+
+                            &::after {
+                                 opacity: 1;
+                            }
+                           
+                        }
+            
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            width: 16px;
+                            height: 27px;
+                            opacity: .5;
+                        }
+                    }
+
+                    .slick-prev,.slick-next {
+                        top: unset;
+                        bottom: -63px;
+                        transform: translate(0);
+                        width: 63px;
+                        height: 63px;
+                        z-index: 1;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 20px;
+                            height: 34px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+
+                    .slick-prev {
+                        left: 15px;
+                    }
+
+                    .slick-next {
+                        right: 15px;
+
+                        &::before {
+                            transform: translate(-50%,-50%) scaleX(-1);
+                        }
+                    }
+                }
+            }
+    
+            .centerLink {
+                display: block;
+                width: 100%;
+                height: 180px;
+                background-size: cover;
+                margin-top: 63px;
+            }
+        }
+        .right-side {
+            width: calc(50% - 15px);
+            height: auto;
+            border: 1px solid $borderColor_2;
+            border-top: 4px solid $borderColor_1;
+            background: $backgroundColor_1;
+            float: right;
+            display: inline-block;
+            vertical-align: top;
+            margin:72px 0 0 20px;
+
+            .home {
+                padding-top: 24px;
+
+                .center-wrap {
+                    width: 90%;
+                    margin: 0 auto;
+
+                    .list-wrap {
+
+                        .timelist {
+                            width: 100%;
+                            height: 60px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+                            margin: -5px 0 18px;
+
+                            span {
+                                color: $fontColor_5;
+                                font-size: 16px;
+                                letter-spacing: 2px;
+                                font-weight: 700;
+                            }
+
+                            button {
+                                position: absolute;
+                                width: 20px;
+                                height: 34px;
+                                opacity: .5;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                transition: all .3s;
+
+                                &:hover,&:active,&.active {
+                                    opacity: 1;
+                                }
+                            }
+                            .goLeft {
+                                left: 8px;
+                                transform: scaleX(1) translateY(-50%);
+                            }
+
+                            .goRight {
+                                right: 8px;
+                                transform: scaleX(-1) translateY(-50%);
+                            }
+                        }
+                    }
+
+                    .type_list {
+                        display: flex;
+                        width: 100%;
+                        height: auto;
+                        flex-wrap: wrap;
+                        padding-left: 4px;
+                        text-align: center;
+                        line-height: 30px;
+                        font-size: 14px;
+                        color: $fontColor_7;
+
+                        li {
+                            position: relative;
+                            width: 125px;
+                            height: 66px;
+                            margin: 0 6px 6px 0;
+                            box-sizing: border-box;
+                            border: 1px solid $borderColor_2;
+                            background:  $backgroundColor_7;
+                            order: 10;
+                            cursor: pointer;
+
+                            .seriesN {
+                                width: 100%;
+                                height: 50%;
+                                background: $backgroundColor_6;
+                                text-align: center;
+                                line-height: 30px;
+                                color: $fontColor_6;
+                                font-size: 14px;
+                                border-bottom: 1px solid $borderColor_2;
+
+                                .seriesType {
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 5px;
+                                    width: 17px;
+                                    height: 17px;
+                                    pointer-events: none;
+                                    top: 15px;
+                                }
+                            }
+
+                            &:hover,&:active,&.active {
+                                .seriesN {
+                                    background: $backgroundColor_8;
+                                }
+                            }
+
+                        }
+
+                    }
+
+                    .remindbox {
+                        width: 100%;
+                        height: 90px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background: $backgroundColor_7;
+                        margin: 20px 0;
+
+                        div {
+                            width: 96%;
+                            height: 32%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            box-sizing: border-box;
+
+                            p {
+                                width: 33%;
+                                color: $fontColor_7;
+                                font-size: 15px;
+                                display: block;
+
+                                span {
+                                    display: inline-block;
+                                    width: 17px;
+                                    height: 17px;
+                                    margin: 0 5px -2px;
+                                }
+
+                                .morning {
+                                    background-position: 0;
+                                }
+                                .afternoon {
+                                    background-position: 20%;
+                                }
+                                .night {
+                                    background-position: 40%;
+                                }
+                                .noob {
+                                    background-position: 60%;
+                                }
+                                .girl {
+                                    background-position: 80%;
+                                }
+                                .gold {
+                                    background-position: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

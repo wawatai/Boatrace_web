@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <header>
+        <div class="top">
+            <span class="brad">
+                TONG BOU
+                <span class="time"></span>
+            </span>
+            <ul class="user userInfo">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password" placeholder="パスワード">
+                            <i class="forget"></i>
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="../images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu" onclick="window.location.href='../index.html'"> ホーム </li>
+                    <li class="saleBtn" onclick="window.location.href='./event.html'"> プロモーション </li>
+                    <li class="vipBtn active" onclick="window.location.href='./vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="window.open('http://race-web.race99.net/events/bet3t')"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="innerPage">
+            <div class="marqueeArea">
+                <div class="center">
+                    <div class="marqueeWrap">
+                        <i class="marquee_ic"></i>
+                        <div class="marquee">
+                            <pre>
+                                <p>読売新聞社杯　全日本王座決定戦　開設６９周年記念</p>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <aside class="innerSide">
+                    <div class="userInfo">
+                        <div>
+                            <p class="account">
+                                bbb123
+                                <span class="lv">VIP20</span>
+                            </p>
+                            <p class="days">參加45日</p>
+                            <ul class="quickSelect">
+                                <li onclick="window.location.href='./deposit.html'">
+                                    <p class="btn">入</p>
+                                    <span>入金</span>
+                                </li>
+                                <li onclick="window.location.href='./withdrawal.html'">
+                                    <p class="btn">出</p>
+                                    <span>出金</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="innerNav">
+                        <li onclick="window.location.href='./member.html'">
+                            <i class="user_ic"></i>
+                            個人情報
+                        </li>
+                        <li class="active" onclick="window.location.href='./vip.html'">
+                            <i class="vip_ic"></i>
+                            VIPメンバー
+                        </li>
+                        <li onclick="window.location.href='./wallet.html'">
+                            <i class="wallet_ic"></i>
+                            マイウォレット
+                        </li>
+                        <li onclick="window.location.href='./bankCard.html'">
+                            <i class="card_ic"></i>
+                            銀行口座
+                        </li>
+                        <li onclick="window.location.href='./dealRecord.html'">
+                            <i class="dealRecord_ic"></i>
+                            取引履歷
+                        </li>
+                        <li onclick="window.location.href='./eventApply.html'">
+                            <i class="event_ic"></i>
+                            プロモーション申請
+                        </li>
+                        <li onclick="window.location.href='./mail.html'">
+                            <i class="mail_ic"></i>
+                            インボックス
+                        </li>
+                    </ul>
+                </aside>
+                <section>
+                    <div class="vipWrap outMode  display">
+                        <div class="vipHeader">
+                            <div class="medal"></div>
+                            <div class="rightBox">
+                                <p class="lv">現在のレベル : nt5_test01</p>
+                                <p class="money">
+                                    <span>入金 : $20</span>
+                                    <span>レベル的なベット額量 : $400</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="lvGraph">
+                            <ul class="text">
+                                <!-- <li>尊龍</li>
+                                <li>尊爵</li>
+                                <li>黃金</li>
+                                <li>白金</li>
+                                <li>鑽石</li> -->
+                                <li>普通</li>
+                            </ul>
+                            <ul class="bar">
+                                <!-- <li class="active"></li> -->
+                                <!-- <li class="active"></li>
+                                <li class="active"></li>
+                                <li class="active"></li> -->
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="nextBox">
+                            <p class="nextWord"> 次のレベルまでの距離:</p>
+                            <div class="nextBar">
+                                入金 
+                                <div class="bar">
+                                    <div class="cnt"></div>
+                                </div>
+                                <p>完了</p>
+                            </div>
+                            <div class="nextBar">
+                                レベル的なベット額量 
+                                <div class="bar">
+                                    <div class="cnt"></div>
+                                </div>
+                                <p>完了</p>
+                            </div>
+                        </div>
+                        <div class="levelEnjoy">
+                            <div class="title"> nt5_test01 楽しむ</div>
+                            <ul>
+                                <li>
+                                    <p class="text"> 毎日の最高入金可能額は</p>
+                                    <p class="num">無制限</p>
+                                </li>
+                                <li>
+                                    <p class="text"> 毎日の最高出金可能額は</p>
+                                    <p class="num">無制限</p>
+                                </li>
+                                <li>
+                                    <p class="text"> 毎日無料出金の最大数</p>
+                                    <p class="num">無制限</p>
+                                </li>
+                            </ul>
+                            <button class="more"> もっとVIPの詳細</button>
+                        </div>
+                    </div>
+                    <div class="vipWrap innerMode">
+                        <div class="detailTitle">
+                            <i class="back"></i>
+                            VIPの詳細 
+                        </div>
+                        <div class="detailCardBox">
+                            <i class="prev"></i>
+                            <div class="wrap">
+                                <ul>
+                                    <li>
+                                        <div class="cardBg">
+                                            <div class="medal">
+                                                <div>
+                                                    <!-- <p>尊龍</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <p class="text">累積預金</p>
+                                                    <p class="num">1000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">流水要件</p>
+                                                    <p class="num">5000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">3か月の降格</p>
+                                                    <p class="num">10000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardBg">
+                                            <div class="medal">
+                                                <div>
+                                                    <!-- <p>尊龍</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <p class="text">累積預金</p>
+                                                    <p class="num">1000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">流水要件</p>
+                                                    <p class="num">5000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">3か月の降格</p>
+                                                    <p class="num">10000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardBg">
+                                            <div class="medal">
+                                                <div>
+                                                    <!-- <p>尊龍</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <p class="text">累積預金</p>
+                                                    <p class="num">1000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">流水要件</p>
+                                                    <p class="num">5000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">3か月の降格</p>
+                                                    <p class="num">10000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardBg active">
+                                            <div class="medal">
+                                                <div>
+                                                    <!-- <p>尊龍</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <p class="text">累積預金</p>
+                                                    <p class="num">1000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">流水要件</p>
+                                                    <p class="num">5000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">3か月の降格</p>
+                                                    <p class="num">10000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardBg">
+                                            <div class="medal">
+                                                <div>
+                                                    <!-- <p>尊龍</p> -->
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <p class="text">累積預金</p>
+                                                    <p class="num">1000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">流水要件</p>
+                                                    <p class="num">5000</p>
+                                                </div>
+                                                <div>
+                                                    <p class="text">3か月の降格</p>
+                                                    <p class="num">10000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <i class="next"></i>
+                        </div>
+                        <div class="detailTitle_2 first">各レベルの昇格/降格条件</div>
+                        <ul class="fakeTable">
+                            <li class="header">
+                                <div>&ensp;</div>
+                                <div>総預金</div>
+                                <div>プロモーション月に必要な賭け金額</div>
+                                <div>降格の月に必要な賭け金額</div>
+                            </li>
+                            <li>
+                                <div>総預金</div>
+                                <div>新規登録会員</div>
+                                <div>100,000</div>
+                                <div>0.38%</div>
+                            </li>
+                            <li>
+                                <div>その月に必要な賭け金額</div>
+                                <div>新規登録会員</div>
+                                <div>200,000</div>
+                                <div>0.35%</div>
+                            </li>
+                            <li>
+                                <div>その月に必要な賭け金額</div>
+                                <div>新規登録会員</div>
+                                <div>100,000</div>
+                                <div>0.38%</div>
+                            </li>
+                            <li>
+                                <div>その月に必要な賭け金額</div>
+                                <div>新規登録会員</div>
+                                <div>100,000</div>
+                                <div>0.38%</div>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="detailTitle_2">すべてのレベルでの回帰</div>
+                        <ul class="fakeTable">
+                            <li class="header">
+                                <div>&ensp;</div>
+                                <div>ズンロン</div>
+                                <div>佳作</div>
+                                <div>ゴールド</div>
+                            </li>
+                            <li>
+                                <div>電子ゲーム</div>
+                                <div>0.3%</div>
+                                <div>0.4%</div>
+                                <div>0.5%</div>
+                            </li>
+                            <li>
+                                <div>ライブゲーム</div>
+                                <div>0.2%</div>
+                                <div>0.25%</div>
+                                <div>0.3%</div>
+                            </li>
+                            <li>
+                                <div>ライブゲーム</div>
+                                <div>0.1%</div>
+                                <div>0.15%</div>
+                                <div>0.2%</div>
+                            </li>
+                            <li>
+                                <div>色付きのボール</div>
+                                <div>0.1%</div>
+                                <div>0.25%</div>
+                                <div>0.3%</div>
+                            </li>
+                            <li>
+                                <div>体育</div>
+                                <div>0.1%</div>
+                                <div>0.15%</div>
+                                <div>0.2%</div>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="detailTitle_2">すべてのレベルでの独占割引</div>
+                        <ul class="fakeTable">
+                            <li class="header">
+                                <div>&ensp;</div>
+                                <div>ズンロン</div>
+                                <div>佳作</div>
+                                <div>ゴールド</div>
+                            </li>
+                            <li>
+                                <div>1日あたりの引き出し限度額</div>
+                                <div>300.000</div>
+                                <div>300.000</div>
+                                <div>500.000</div>
+                            </li>
+                            <li>
+                                <div>プロモーションボーナス</div>
+                                <div>X</div>
+                                <div>888</div>
+                                <div>1,688</div>
+                            </li>
+                            <li>
+                                <div>宝物レベルボーナス</div>
+                                <div>X</div>
+                                <div>588</div>
+                                <div>888</div>
+                            </li>
+                            <li>
+                                <div>誕生日ボーナス</div>
+                                <div>X</div>
+                                <div>388</div>
+                                <div>888</div>
+                            </li>
+                            <li>
+                                <div>3セクションボーナス</div>
+                                <div>X</div>
+                                <div>388</div>
+                                <div>588</div>
+                            </li>
+                            <li>
+                                <div>毎週の限定配達</div>
+                                <div>X</div>
+                                <div>X</div>
+                                <div>3,888</div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" a href="#"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='../html/event.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='../html/vip.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 無断転載禁止 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="jumpWindow score">
+            <div class="title">
+                <p>查看積分</p>
+                <i class="close_ic"></i>
+            </div>
+            <div class="total">
+                當前積分
+                <p>8,898,888</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

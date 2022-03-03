@@ -1,0 +1,682 @@
+.filter {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 1080px;
+    z-index: 10;
+    background:$backgroundColor_9;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+
+    &.display {
+        display: flex;
+    }
+
+    .jumpWindow {
+        width: 550px;
+        height: auto;
+        background:$backgroundColor_1;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 235px;
+
+        &.loginWIndow {
+
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                height: 155px;
+    
+    
+                input {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 20px;
+                    @include inputStyle_2;
+                }
+    
+                button {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 15px;
+                    @include buttonStyle_3;
+                }
+    
+                p {
+                    font-size: 16px;
+                    margin: 26px 0;
+                    color: $fontColor_7;
+                }
+            }
+
+        }
+
+        &.forgetPassword {
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+    
+    
+                input {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 20px;
+                    @include inputStyle_2;
+                }
+    
+                button {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 15px;
+                    @include buttonStyle_3;
+                }
+    
+                p {
+                    font-size: 14px;
+                    margin: 23px 0 6px 0;;
+                    color: $fontColor_9;
+                }
+                
+                span {
+                    font-size: 14px;
+                    margin: 5px 0 30px 0;
+                    color: $fontColor_9;
+                }
+            }
+        }
+
+        &.news {
+            display: none;
+            width: 840px;
+            min-height: 250px;
+            height: auto;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                
+                p {
+                    font-size: 16px;
+                }
+
+                i {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .nav {
+                margin: 30px 15px 8px;
+                border-bottom: solid 1px $borderColor_1;
+                display: flex;
+
+                li {
+                    position: relative;
+                    height: 28px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    padding: 0 40px;
+                    cursor: pointer;
+                    border-bottom: solid 3px transparent;
+                    color: $fontColor_4;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover,&:active,&.active {
+                        color: $fontColor_4;
+                        border-bottom:4px solid $borderColor_1;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -1px;
+                        background: $backgroundColor_2;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+                margin: 0px 15px 20px;
+
+                &.display {
+                    display: block;
+                }
+
+                li {
+                    width: 100%;
+                    height: 45px;
+                    padding: 0 5px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $borderColor_1;
+
+                    div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p {
+                            font-weight: bold;
+
+                            &.text {
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                max-width: 670px;
+                                color: $fontColor_10;
+                                font-size: 16px;
+                            }
+
+                            &.date {
+                                color: $fontColor_7;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.plsGo {
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                color: $fontColor_3;
+                font-size: 16px;
+                padding: 24px 80px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .btnBox {
+                text-align: center;
+                padding: 20px 0;
+
+                button {
+                    width: 322px;
+                    height: 42px;
+                    @include buttonStyle_3;
+                }
+            }
+        }
+
+        &.score {
+            display: none;
+            width: 400px;
+
+            &.display {
+                display: block;
+            }
+
+            .total {
+                display: flex;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 0;
+                border-bottom: solid 1px $borderColor_2;
+                font-size: 16px;
+                color: $fontColor_2;
+
+                p {
+                    color: $fontColor_4;
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-top: 8px;
+                }
+            }
+
+            ul {
+                max-height: 300px;
+                overflow-y: scroll;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 48px;
+                    border-bottom: solid 1px $borderColor_2;
+
+                    &:last-child {
+
+                        .point {
+
+                            .notice {
+                                top: -40px;
+                                bottom: unset;
+    
+                                p {
+    
+                                    i {
+                                        top: unset;
+                                        bottom: -8px;
+                                        border-width: 8px 6px 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    div {
+                        font-size: 14px;
+                        color: $fontColor_2;
+
+                        &.name {
+                            width: 152px;
+                            border-right: solid 1px $borderColor_2;
+                            padding-left: 30px;
+                        }
+
+                        &.point {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 25px;
+                            position: relative;
+
+                            &:hover,&:active,&.active {
+                                
+                                .notice {
+                                    display: block;
+                                }
+                            }
+
+                            .notice {
+                                display: none;
+                                position: absolute;
+                                left: 30px;
+                                bottom: -40px;
+                                width: 139px;
+                                height: 47px;
+                                z-index: 1;
+
+                                p {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: $backgroundColor_13;
+                                    border-radius: 3px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: $fontColor_1;
+
+                                    i {
+                                        display: block;
+                                        position: absolute;
+                                        top: -8px;
+                                        left: 15px;
+                                        width: 0px;
+                                        height: 0px;
+                                        border-style: solid;
+                                        border-width: 0px 6px 8px;
+                                        border-color: $borderColor_9 transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.passwordWindow {
+            display: none;
+            &.display {
+                display: block;
+            }
+            form {
+                
+                .content {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 24px 80px;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 30px;
+                        font-size: 15px;
+
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        @include inputStyle_3;
+                    }
+                }
+
+                .btnBox {
+                    padding-bottom: 37px;
+                    text-align: center;
+
+                    button {
+                        width: 322px;
+                        height: 42px;
+                        @include buttonStyle_3;
+                    }
+                }
+            }
+        }
+
+        &.changeBTNWindow {
+
+            display: none;
+            &.display {
+                display: block;
+            }
+
+
+            form {
+                
+                .content {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 30px 80px;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 20px;
+                        font-size: 15px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        @include inputStyle_3;
+                    }
+                }
+
+                .btnBox {
+                    padding-bottom: 43px;
+                    text-align: center;
+
+                    button {
+                        width: 322px;
+                        height: 42px;
+                        @include buttonStyle_3;
+                    }
+                }
+            }
+        }
+
+        &.walletRecord {
+            width: 976px;
+
+            .title {
+                height: 70px;
+                background: none;
+                box-sizing: border-box;
+                padding: 0 30px;
+
+                p {
+                    font-size: 24px;
+                    text-align: left;
+                    color: $fontColor_2;
+                }
+
+                i {
+                    width: 29px;
+                    height: 29px;
+                }
+            }
+
+            .content {
+                height: auto;
+                padding: 0 30px 23px;
+
+                .num {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: $fontColor_2;
+                }
+
+                table {
+                    width: 100%;
+                    margin-top: 18px;
+
+                    tr {
+
+                        th {
+                            width: 25%;
+                            vertical-align: middle;
+                            height: 35px;
+                            border-bottom: solid 2px $borderColor_5;
+                            font-size: 12px;
+                            color: $fontColor_2;
+                        }
+                    }
+                }
+
+                .noData {
+                    height: 80px;
+                    padding: 0 30px 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    color: $fontColor_7;
+                }
+            }
+        }
+
+        &.checkEvent {
+            display: none;
+            width: 840px;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 28px 47px;
+
+                .imgBox {
+                    overflow-x: auto;
+                }
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: $fontColor_3;
+                    margin-top: 10px;
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                padding: 18px 0;
+                text-align: center;
+
+                button {
+                    width: 322px;
+                    height: 42px;
+                    @include buttonStyle_3;
+                }
+            }
+        }
+
+        &.betWindow {
+            display: none;
+            padding-top: 54px;
+            flex-direction: column;
+            position: relative;
+
+            &.display {
+                display: flex;
+            }
+
+            .close_ic {
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+
+            .betTitle {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding-left: 45px;
+                font-size: 29px;
+                font-weight: bold;
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                margin-top: 40px;
+                padding: 0 45px;
+
+                .row {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 42px;
+                    margin-bottom: 10px;
+                    justify-content: center;
+
+                    &.forBtn {
+                        justify-content: flex-end;
+                        height: auto;
+                    }
+
+                    p {
+                        width: 120px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $fontColor_2;
+                    }
+
+                    input {
+                        width: 267px;
+                        height: 42px;
+                        @include inputStyle_3;
+                    }
+
+                    .trans_arrow {
+                        display: block;
+                        width: 24px;
+                        height: 21px;
+                        transform: rotate(90deg);
+                        margin-left: 120px;
+                    }
+
+                    .btnBox {
+                        width: 267px;
+                        height: auto;
+
+                        button {
+                            width: 85px;
+                            height: 32px;
+                            @include buttonStyle_11;
+                            margin: 0 2px 6px 0;
+
+                            &:nth-of-type(3n) {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    
+                    .check {
+                        width: 267px;
+                        height: 42px;
+                        @include buttonStyle_3;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .enterGame {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 20px 0;
+                border-top: solid 1px $borderColor_2;
+
+                button {
+                    width: 351px;
+                    height: 42px;
+                    @include buttonStyle_3;
+                }
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background: $backgroundColor_2;
+            position: relative;
+
+            p {
+                color: $fontColor_1;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+
+            i {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+}

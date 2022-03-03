@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <header>
+        <div class="top">
+            <span class="brad">
+                TONG BOU
+                <span class="time"></span>
+            </span>
+            <ul class="user userInfo">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password" placeholder="パスワード">
+                            <i class="forget"></i>
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="../images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu" onclick="window.location.href='../index.html'"> ホーム </li>
+                    <li class="saleBtn active" onclick="window.location.href='./event.html'"> プロモーション </li>
+                    <li class="vipBtn" onclick="window.location.href='./vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="window.open('http://race-web.race99.net/events/bet3t')"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="helpPage">
+            <div class="center">
+                <div>
+                    <ul class="nav">
+                        <li class="title active">
+                            <p>
+                                <i class="bulb"></i>
+                                初心者ガイド
+                            </p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li class="box display">
+                            <ul>
+                                <li class="forNew_1 active"> 登録 </li>
+                                <li class="forNew_2"> 入金 </li>
+                                <li class="forNew_3"> 出金 </li>
+                                <li class="forNew_4">轉帳</li>
+                                <li class="forNew_5"> プロモーションルール </li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <p>
+                                <i class="problem"></i>
+                                よくある質問 
+                            </p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li class="box">
+                            <ul>
+                                <li class="forQues_1"> よくある質問 </li>
+                                <li class="forQues_2"> リモートアシスタンス </li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <p>
+                                <i class="aboutUs"></i>
+                                当社について 
+                            </p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li class="box">
+                            <ul>
+                                <li class="forUs_1"> 利用規約 </li>
+                                <li class="forUs_2"> プライバシーポリシー </li>
+                                <li class="forUs_3"> 責任あるゲーミング </li>
+                                <li class="forUs_4"> プライバシーポリシー </li>
+                                <li class="forUs_5"> 免責事項 </li>
+                                <li class="forUs_6"> ライセンス </li>
+                                <li class="forUs_5">  入出金方法  </li>
+                                <li class="forUs_6">  利用規約  </li>
+                            </ul>
+                        </li>
+                        <li class="title">
+                            <p>
+                                <i class="download"></i>
+                                アプリダウンロード  
+                            </p>
+                            <i class="arrow_ic"></i>
+                        </li>
+                        <li class="box">
+                            <ul>
+                                <li class="forUs_1"> allbetライブ </li>
+                                <li class="forUs_2"> SAライブ </li>
+                                <li class="forUs_3"> WMライブ </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="helpWrap">
+                    <div class="newHelp_1 display">
+                        <h2>アカウントの登録方法は？</h2>
+                        <p>
+                            <span>1.ウェブサイト右上の「ログイン」の機能ボタンをクリックします</span>
+                        </p>
+                        <p>
+                            <span>2.登録ページに入り、ユーザー名とパスワード情報を入力して正常に登録します</span>
+                        </p>
+                        <p>
+                            <span>3.登録する前に、18歳以上であり、私たちを読んでいることを確認してください<a href="#">規約と条件</a>。</span>
+                        </p>
+                        <h2>ウェブサイトに登録した後、私のプロフィール情報は安全ですか？</h2>
+                        <p>
+                            <span>顧客アカウント情報のセキュリティと顧客のプライバシーについては、プライバシーポリシーを参照してください。</span>
+                        </p>
+                        <h2>登録したユーザー名を忘れた場合はどうすればよいですか？</h2>
+                        <p>
+                            <span>メンバーのユーザー名私たちのオンラインカスタマーサービスチームに連絡して、必要な支援を提供することができます。</span>
+                        </p>
+                        <h2>パスワードを忘れた場合はどうすればよいですか？</h2>
+                        <p>
+                            <span>1.上部にある[パスワードを忘れた場合]ボタンをクリックします。</span>
+                        </p>
+                        <p>
+                            <span>2.パスワードリセットページに入り、携帯電話番号を入力して新しいパスワードを取得します。</span>
+                        </p>
+                        <h2>アカウントのパスワードを変更するには？</h2>
+                        <p>
+                            <span>1.アカウントにログインした後、ユーザー名をクリックして「個人情報」と入力します。</span>
+                        </p>
+                        <p>
+                            <span>2.ページの[パスワードの変更]をクリックして、古いパスワードと新しいパスワードを入力します</span>
+                        </p>
+                        <p>
+                            <span>3. [確認]をクリックして変更を完了します。</span>
+                        </p>
+                        <h2>ログインアカウントがロックされるように求められるのはなぜですか？</h2>
+                        <p>
+                            <span>メンバーが間違ったパスワードを5回以上入力した場合、メンバーアカウントのセキュリティを確保するために、システムは自動的にメンバーアカウントをロックします。</span>
+                        </p>
+                        <h2>アカウントのキャンセルを申し込むことはできますか？</h2>
+                        <p>
+                            <span>暫時不接受任メンバーアカウントをキャンセルする理由を一時的に受け入れないでください。オンラインカスタマーサービスに連絡して、メンバーアカウントの凍結/非アクティブ化を申請することができます。何理由註銷會員賬戶，您可以與在線客服聯繫申請凍結/停用您的會員賬戶。</span>
+                        </p>
+                        <h2>プロフィール情報の変更をリクエストするにはどうすればよいですか？</h2>
+                        <p>
+                            <span>登録が完了すると、顧客は携帯電話、PC、コンピューター、またはその他のデバイスを介して基本的な個人情報を変更できます。ご不明な点がございましたら、オンラインカスタマーサービスチームにお問い合わせください。</span>
+                        </p>
+                    </div>
+                    <div class="newHelp_2">
+                        <h2>アカウントへの入金方法は？</h2>
+                        <p>まず、会員になる必要があります。登録が完了したら、Tongbo（tb588）アカウントにログインします。ホームページの右上隅にある入出金ボタンがあります。入力後、[I]をクリックします。入金したい、あなたに合った入金方法を見つけることができます。</p>
+                        <p>現在、3つの入金方法のみが受け入れられています</p>
+                        <p>
+                            1.送金と送金：ATM、銀行間およびその他の預金方法。
+                            <br>
+                            2.銀行の店頭送金：顧客は、保管したい現金を大手銀行などの金融機関に持参する必要があります。
+                            <br>
+                            3.サードパーティの支払い。
+                        </p>
+                        <ul class="teachList">
+                            <li>
+                                <div class="title">
+                                    <p>シリアル番号デポジット</p>
+                                    <i class="arrow_ic"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="img online01"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <p>Alipay</p>
+                                    <i class="arrow_ic"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="img online01"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <p>クラウドクイックパス</p>
+                                    <i class="arrow_ic"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="img online01"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <p>支払うオンラインバンキング</p>
+                                    <i class="arrow_ic"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="img online01"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    <p>ウィーチャットペイ</p>
+                                    <i class="arrow_ic"></i>
+                                </div>
+                                <div class="content">
+                                    <div class="img online01"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="newHelp_3">
+                        <h2>アカウントから資金を引き出すにはどうすればよいですか？</h2>
+                        <p>※最初の引き出しは情報検証に合格する必要があります※</p>
+                        <p>アカウントにログイン後、ホームページ右上の[金融センター]に移動し、[引き出し]を選択してください。</p>
+                        <p>引き出し金額を記入して引き出します。</p>
+                        <p>出金を申請した後、出金金額はロックされます。アカウントが確認されない場合、引き出し金額は中央のウォレットに返金されます。出金の失敗を防ぐため、出金する前に口座情報が正しいことを確認してください。</p>
+                        <div class="img online02"></div>
+                        <h2>撤退に関するFAQ</h2>
+                        <p>Q：他人の銀行カードを使ってお金を引き出すことはできますか？</p>
+                        <p>A：お客様の口座資金の安全を確保するため、出金にはゲームを使用する必要があり、出金する銀行カードの名称は登録名と同じである必要があります。</p>
+                        <h2>退会を申請する際に注意すべき点は何ですか？</h2>
+                        <p>1.引き出し可能な銀行カードの名前は、ゲームアカウントの登録名と同じである必要があります。</p>
+                        <p>2.引き出しに使用される銀行カード情報は正確である必要があります。</p>
+                        <p>3.ボーナスオファーを申請していない場合は、賭けが売上高を2倍にした後に撤回を申請できます。</p>
+                        <p>4.初回デポジットボーナスを申請する場合は、プロモーションに記載されている有効な賭け条件を満たす必要があります。</p>
+                        <p>5.引き出し申し込みは24時間ご利用いただけます。</p>
+                        <h2>ゲームアカウントにお金があるのに、なぜお金を引き出すことができないのですか？</h2>
+                        <p>お金を引き出す前に、ゲームプラットフォームから中央アカウントに資金を送金する必要があります。</p>
+                        <h2>複数の銀行カードをバインドできますか？</h2>
+                        <p>会員口座は、引き出し操作のために複数の銀行カードにバインドすることができ、口座センターで[銀行カード管理]を選択し、新しいものを追加することができます。</p>
+                        <h2>なぜ引き出しをレビューする必要があるのですか？</h2>
+                        <p>出金監査は、関係部門が出金を処理する前の簡単な検証手順であり、お客様の資金の安全を確保するためのものであるため、関連情報を確認する必要があります。</p>
+                    </div>
+                    <div class="newHelp_4">
+                        <h2>送金方法は？</h2>
+                        <p>ログインアカウント > メンバーセンター > センターウォレット > オプションのウォレットと金額</p>
+                        <div class="img online03"></div>
+                        <h2>転送に関するよくある質問</h2>
+                        <p>1.ゲームアカウントにお金があるのにお金を引き出すことができないのはなぜですか？</p>
+                        <p>引き出す前に、ゲームウォレットから中央ウォレットに資金を移動する必要があります。</p>
+                        <p>2.送金に失敗しましたが、お金がなくなったのですが、どうすればよいですか？</p>
+                        <p>送金する場合は、続行する前にゲームプラットフォームを終了してください。転送注文を紛失した場合は、オンラインカスタマーサービスに連絡して、補足注文について問い合わせてください。</p>
+                    </div>
+                    <div class="newHelp_5">
+                        <h2>プロモーションの申し込み方法は？</h2>
+                        <p>アカウントにログインした後、[プロモーション]をクリックするか、メンバーセンターのプロモーション申請ページに入り、対応するプロモーションを選択します。</p>
+                        <h2>オファーの申し込みに成功した後、ボーナスやギフトを受け取っていない場合はどうすればよいですか？</h2>
+                        <p>申し込みが成功してから指定時間内にギフトが届かない場合は、いつでもオンラインカスタマーサービスにご連絡ください。</p>
+                    </div>
+                    <div class="question_1">
+                        <h2>メンバーシップの年齢要件に参加しますか？</h2>
+                        <p>18歳以上で、利用規約とプライバシーポリシーに同意する必要があります。ほとんどの国にはオンラインゲームに関する法規制があります。必ず現地の法律を読み、遵守してください。</p>
+                        <h2>どうすれば入金できますか？</h2>
+                        <p>
+                            次の方法を使用して、口座に資金を入金できます。
+                            <br>
+                            1.銀行振込預金（インターネット銀行ATM振込または物理ATM振込）。
+                            <br>
+                            2.仮想ATMデポジット（物理的なATM転送）。
+                            <br>
+                            3.スーパーストアでの支払い。
+                        </p>
+                        <p>
+                            私たちの大切なお客様として、私たちは常に銀行を手数料から解放するよう努めます。これにより、口座への入金や引き出しの際に手数料が請求されることはありません。
+                            <br>
+                            事前に特に通知しない限り、お客様がリクエストした特定の方法では、過剰な入出金が行われます。
+                        </p>
+                        <h2>私の個人データは安全ですか？</h2>
+                        <p>ここでは、お客様の個人データの安全性を確保し、最高レベルのセキュリティ対策と最も安全な通信プロトコル（SSL 128ビット暗号化標準）を使用することを主張し、最も安全な作業環境に保存します。決してあなたの個人データを第三者に開示してはいけません。</p>
+                        <h2>長い間ログインしておらず、パスワードを忘れた場合はどうすればよいですか？</h2>
+                        <p>パスワードをお忘れの場合は、画面右上の[パスワードをお忘れですか？]をクリックし、登録時に使用した携帯電話に入力してください。システムが携帯電話に仮パスワードを送信し、仮パスワードを使用してログインします。次に、メンバーセンターに移動してパスワードを変更します。</p>
+                        <h2>カジノはいくつの通貨をサポートしていますか？</h2>
+                        <p>現在、このカジノはニュー台湾ドルのみをサポートしており、将来的には状況に応じて日本通貨の賭けが開始されます。</p>
+                        <h2>カジノでの最低賭け金はいくらですか？</h2>
+                        <p>最小賭け金はアイテムごとに異なり、各ゲームを開くと、ゲーム画面にそのゲームの最小賭け金が表示されます。</p>
+                        <h2>ベットを追加してから支払いにかかる時間はどれくらいですか？</h2>
+                        <p>結果の正しさを追求するために、公式の結果に基づいて可能な限り迅速に決済と支払いを行いますが、イベントによっては予期しない状況が発生し、正しい結果の公式発表が妨げられる場合があります。また、イベントによって決済プロセスが遅れ、支払いが遅れる可能性があります。</p>
+                        <h2>アプリケーションポイントの販売取引を完了するのにどのくらい時間がかかりますか？</h2>
+                        <p>カジノは24時間年中無休のポイント販売取引を提供しており、取引要求を送信してから30分以内に迅速に完了します。</p>
+                    </div>
+                    <div class="question_2">
+                        <h2>リモートアシスタンス</h2>
+                        <h3>ステップ1：に移動します<a href="#">Team-Viewer</a>公式ウェブサイト、リモートアシスタンスのURLをダウンロードしてください。</h3>
+                        <p>ダウンロードして実行した後</p>
+                        <div class="img online04"></div>
+                        <p>ステップ2：インストールを実行します。インストールティーチングプロセスについては、リモートアシスタンスプログラムのインストールティーチングを参照してください。</p>
+                        <p>ステップ3：[リモートアシスタンスID]と[パスワード]をカスタマーサービススタッフに送信して、リモートアシスタンスサービスを提供します。</p>
+                        <div class="img online05"></div>
+                        <h3>リモートアシスタンス</h3>
+                        <p>1.無料でダウンロード</p>
+                        <p>2.リモートアシスタンスプログラムは、使用後に閉じてアンインストールできるため、セキュリティの問題を心配する必要はありません。</p>
+                        <p>3.カスタマーサービスまたはコンピューターエンジニアリングスタッフは、コンピューターをリモートで操作し、現在のコンピューターまたはソフトウェアの問題をチェックして解決するための適切な支援を行うことができます。</p>
+                    </div>
+                    <div class="question_3">
+                        <h2>オンラインサービス</h2>
+                        <p>私たちの最もフレンドリーでプロフェッショナルなカスタマーサービススタッフが24時間相談と支援を提供します。</p>
+                        <p>エージェンシーアライアンスLine ID：Slot657</p>
+                        <p>顧客サービス：cstb588@gmail.com</p>
+                        <p>顧客サービスLine ID：cs_5688</p>
+                        <p>苦情メールボックス：tbcscomplaint@gmail.com</p>
+                    </div>
+                    <div class="aboutUs_1">
+                        <h2>関連する説明</h2>
+                        <p>オンライン版に加えて、モバイル版をダウンロードして携帯電話でゲームを楽しんだり、ダウンロードしてコンピューターにインストールしたりすることもできます。</p>
+                        <p>モバイルデバイスまたはダウンロードパッドを介してゲームをプレイする場合、ログインするにはプロファイルのプラットフォームアカウントのパスワードを使用する必要があることに注意してください。</p>
+                        <h2>ログイン方法</h2>
+                        <p>初めてOboAPPを使用してログインする場合は、コンピューターバージョンを使用してフロントデスクにログインし、コンピューターバージョンのOboロビーに入り、上部のOboAPPの入り口にあるコードをスキャンする必要があります。ロビーの右隅、ジェスチャーを設定します</p>
+                       <button>allbetダウンロード</button>
+                    </div>
+                    <div class="aboutUs_2">
+                        <h2>関連する説明</h2>
+                        <p>オンライン版に加えて、モバイル版をダウンロードして携帯電話でゲームを楽しんだり、ダウンロードしてコンピューターにインストールしたりすることもできます。</p>
+                        <p>モバイルデバイスまたはダウンロードパッドを介してゲームをプレイする場合、ログインするにはプロファイルのプラットフォームアカウントのパスワードを使用する必要があることに注意してください。</p>
+                        <h2>ログイン方法</h2>
+                        <p>初めてOboAPPを使用してログインする場合は、コンピューターバージョンを使用してフロントデスクにログインし、コンピューターバージョンのOboロビーに入り、上部のOboAPPの入り口にあるコードをスキャンする必要があります。ロビーの右隅、ジェスチャーを設定します</p>
+                        <button>SAダウンロード</button>
+                    </div>
+                    <div class="aboutUs_3">
+                        <h2>関連する説明</h2>
+                        <p>オンライン版に加えて、モバイル版をダウンロードして携帯電話でゲームを楽しんだり、ダウンロードしてコンピューターにインストールしたりすることもできます。</p>
+                        <p>モバイルデバイスまたはダウンロードパッドを介してゲームをプレイする場合、ログインするにはプロファイルのプラットフォームアカウントのパスワードを使用する必要があることに注意してください。</p>
+                        <h2>ログイン方法</h2>
+                        <p>初めてOboAPPを使用してログインする場合は、コンピューターバージョンを使用してフロントデスクにログインし、コンピューターバージョンのOboロビーに入り、上部のOboAPPの入り口にあるコードをスキャンする必要があります。ロビーの右隅、ジェスチャーを設定します</p>
+                        <button>WMダウンロード</button>
+                    </div>
+                    <div class="aboutUs_4">
+                        <h2>安全性</h2>
+                        <p>法的に規制されたオンラインゲーム環境を提供することをお約束します。さらに、すべての安全対策を講じ、適格なプレーヤーのみがサービスを受けるように優れたテクノロジー機器を設置し、オンラインギャンブルが禁止されている地域のユーザーは賭けを行うことができません。</p>
+                        <p>最高の暗号化技術とファイアウォールシステムを使用して、セキュリティとプライバシーを保護し、公正なゲームを楽しむことができます。エンタープライズグレードの暗号化テクノロジ（1024ビットRSAキー交換および448ビットブローフィッシュ）を使用しているため、通常の商用グレードのSSLよりも高い保護をデータに提供できます。この技術は現在、世界の主要な金融機関で使用されています。</p>
+                        <p>すべての銀行取引は、高水準のセキュリティと機密性のネットワークで国際金融機関によって実行されます。プレーヤーアカウントプロファイルへのアクセスには、プレーヤーの一意のログインIDとパスワードも必要です。</p>
+                        <p>サイト上での不正行為は一切許可しません。そのような行動は、即時のアカウント閉鎖、すべての賞金の没収、そしておそらくプレーヤーに対する民事および/または刑事訴訟につながります。</p>
+                        <p>会社は、そもそもプレイヤーの権利と利益を常に保護します。</p>
+                    </div>
+                    <div class="aboutUs_5">
+                        <h2>免責事項</h2>
+                        <p>サービスを享受するのは会員自身の意思であり、リスクは会員自身が負担するものとします。私たちのサービスに参加するとき、それはメンバーが提供されるサービスが正常で、合理的で、公正で公正であることに同意することを意味します。</p>
+                        <p>会員の現地法に基づくギャンブルが違法である場合、当社のサービスへの参加は推奨されません。国民は、ギャンブルが違法であると見なされている国に参加することは奨励されていません。メンバーがサービスに参加することによって現地の法律に違反した場合、メンバーは責任を負いません。</p>
+                        <p>ウェブサイトを24時間ご利用いただけるよう最善を尽くしておりますが、サーバーの攻撃、海底光ファイバーケーブルの損傷などの理由でウェブサイトにアクセスできない場合、当社は責任を負いかねます。または、会社のウェブサイトおよび情報サービス（無線通信プロバイダーなど）の第三者によるサービスの遅延、契約違反、または提供の失敗により、Easyは保証を提供せず、責任を負いません。</p>
+                        <p>
+                            次の状況については責任を負いません（直接的または間接的を問わず）：
+                            <br>
+                            1. 利益の損失
+                            <br>
+                            2. 事業の損失
+                            <br>
+                            3. 収入の損失
+                            <br>
+                            4. 機会の喪失
+                            <br>
+                            5.データの損失
+                            <br>
+                            6. のれんまたは評判の喪失
+                            <br>
+                            7. 特別、間接的、または結果的な損害
+                        </p>
+                        <p>ゲームは、現在提供されているサービスに対して明示または黙示の保証を提供するものではなく、サービスの品質、適合性、完全性、または正確性についての保証および説明も提供しません。</p>
+                        <p>ゲームは、メンバーに通知することなく、サービスコンテンツを一時的または恒久的に一時停止、終了、変更、削除、または追加する絶対的な権利を有し、それによって生じるいかなる損失についても責任を負わないものとします。</p>
+                        <p>ウェブサイト上の情報のいくつかは、その公開の日時に関連しています。したがって、特定の日時を過ぎると、関連情報が正確かつ真実でなくなる可能性があり、プロジェクトを更新することを約束したり、プロジェクトの適時性によって生じた損失について責任を負ったりすることはありません。</p>
+                    </div>
+                    <div class="aboutUs_6">
+                        <h2>一般利用規約</h2>
+                        <p>関連規則以下の法的条件を注意深くお読みください。よくお読みになり、内容を十分にご理解ください。本規約に準拠するお客様の権利と義務について質問がある場合は、管轄の弁護士に説明を求めてください。</p>
+                        <p>1. 「規則および条件」の対象となるtb588サービスの使用を登録する前に、18歳以上であることを確認し、これらの規則および条件を読み、完全に理解し、受け入れて遵守することに同意したことを表明および保証します。 。以下のルールや条件に同意したくない場合は、アカウントを登録して開設することはできません。また、ゲームのソフトウェアやサービスにアクセスすることもできません。</p>
+                        <p>2. 当社のすべての製品情報、Webサイト登録、および提供されるサービスは、これらの利用規約に同意する必要があります。</p>
+                        <p>3. 当社は、これらの規約およびゲームルールを随時修正、更新、および修正する絶対的な権利を留保します。上記の改訂、更新、または改訂は、ウェブサイトの利用規約で公開されます。これらの規約およびゲームルールは、修正、更新、または変更された場合、ゲームサイトに投稿されたときに有効になります。上記の改訂、更新、または改訂が公開された後、ユーザーがゲームWebサイトおよびゲーム機器を介してゲームサービスを継続して使用、接続、および参加することは、公開された改訂または更新された規制およびゲームルールに対するユーザーの同意および受諾と見なされるものとします。</p>
+                        <p>4. これらの利用規約は、当社との最終的な協力契約を表しており、お客様と当社の間の以前のすべての契約に優先します。これらの利用規約を読み、同意することを確認してください。</p>
+                        <p>5. 本契約またはウェブサイト上の契約について質問または異議がある場合は、この契約が優先するものとします。</p>
+                        <p>6. ゲーム活動への参加を許可する前に、私たちはあなたにあなたの身元と年齢の有効な証明を提供するよう要求する権利があります。</p>
+                        <h2>プロトコル</h2>
+                        <p>1. 本契約は、リアルまたは仮想マネーゲームおよびその他のゲームをプレイするためのカジノの使用に関するお客様と当社の間のさまざまな契約を対象としています。</p>
+                        <p>2. 当社のすべての製品情報、Webサイト登録、および提供されるサービスは、これらの「規則および条件」に同意する必要があります。。</p>
+                        <p>3. ゲームのルールは、プレイ方法、トーナメント、および特定のゲーム、イベント、トーナメントに適用されるその他すべてのルールを含むがこれらに限定されないWebサイトの他の場所にリストされ、そのようなすべてのルールは統合され、本契約に含まれます。 。利用規約で。</p>
+                        <h2>法的要件</h2>
+                        <p>1. お住まいの国の法律に基づく法定年齢に達している場合にのみ、tb588カジノおよびtb588.netWebサイトを使用できます。</p>
+                        <p>2. 18歳未満の方は、いかなる場合でも当ウェブサイトをご利用いただけません。</p>
+                        <p>3. 一部の法域ではオンラインギャンブルの合法性を宣言していませんが、他の法域ではオンラインギャンブルを明示的に違法としています。法律で禁止されている地域の誰もがカジノやウェブサイトを利用できるようにすることはありません。可用性は、法律で禁止されている国を含め、どの国でもWebサイトを提供したり、使用を奨励したりするものと解釈されるべきではありません。適用法で禁止されている場所で使用することはできません。あなたは、居住国でのカジノ使用の合法性を決定する責任を単独で負うことに同意するものとします。</p>
+                        <p>4. これらの利用規約は、お客様と当社の間の最終的な協力契約を表しており、お客様と当社の間の以前のすべての交渉に優先します。これらの利用規約を読み、同意することを確認してください。</p>
+                        <p>5. 儘管以上規定適合一般情況，但您無法使用我們娛樂城，如果您身處新上記の規則は一般的に適用されますが、シンガポール、台湾、グアドループ、イスラエル、キプロス、エストニア、ブルガリア、米国領、香港、フランス、オランダ領土にいる場合は、カジノを使用できません。加坡,台灣,瓜德羅普,以色列，塞浦路斯，愛沙尼亞，保加利亞，美國領土，香港，法國和荷蘭安的列斯群島“被禁止轄區。</p>
+                        <h2>アカウント利用規約</h2>
+                        <p>1. メンバーのアカウントに問題がある場合、結果が利用可能になるまでメンバーのアカウントを一時停止する権利を留保します。紛争は、紛争の日付、時刻、詳細を書面で提出する必要があり、tb588 @ gmail.comに電子メールで送信する必要があります。調査によりすべての紛争が解決されるまで、メンバーの紛争に対処するためのあらゆる合理的な措置が取られます。</p>
+                        <p>2. 予告なしにいつでもアカウントを一時停止またはキャンセルする理由があります。アカウントの残高をキャンセルしても、アカウントには残高が残っており、最初に選択した引き出し方法で残高が返金されます。また、カジノアカウントの賞金または資格をクリアまたは没収する権利を留保します。</p>
+                        <p>3. アカウントとパスワードを安全に保つ必要があります。他の人または未成年者を含む第三者が、ウェブサイトへのアクセスおよび賭けの操作のためにあなたのアカウントを使用または再利用することを許可しないでください。当社は、そこから生じる賞またはボーナスの支払いを拒否する権利を留保します。アカウント内の第三者が被ったすべての損失については、お客様が単独で責任を負います。</p>
+                        <p>4. あなたは、私たちがすべての出納係（預金と引き出し）を管理することに同意します。また、あなたが共謀的、詐欺的、または違法な活動に従事している疑いがあると私たちが信じる理由がある場合にも同意します。私たちはあなたの支払いを差し控える権利を留保します。</p>
+                        <p>5. あなたは私たちのオンラインカジノへの第三者のリンクを含む、私たちに支払うべき金銭を支払うことに同意します。同時に、お客様は、当社に支払われるべき請求を行ったり、支払いをキャンセルしたりしないことに同意するものとします。また、この理由により、取引プロセスで発生した費用も負担する必要があります。</p>
+                        <p>6. 出金をeウォレットまたはクレジットカードで処理する場合は、このアカウント情報が登録情報と一致している必要があることに注意してください。第三者との取引は許可されません。通過電子貨幣包或者信用卡處理，本帳戶訊息必須和您的註冊訊息相符。沒有第三方交易將被允許。</p>
+                        <p>7. 現在利用可能な残高を引き出すことができ、資金がアカウントに送金されるまで2〜4営業日かかります。支払いについては、取引中に発生した手数料を差し引くかどうかを当社の裁量で決定します。</p>
+                        <p>8. プレーヤーデータベースで「休止状態」のアカウントを確認します。この口座の資金はすべて引き出すことができます。お客様のアカウントが休止状態のアカウントであると当社が判断した場合、電子メール、手書きの手紙、電話などの登録情報をお知らせします。連絡に失敗した場合は、12か月後に、身元を証明するためのリクエストを提出する必要があります。</p>
+                        <p>9. 当社は、セキュリティ上の理由でロックされたアカウントを同じように扱う権利を留保します。 12か月以上経過しても連絡が取れない場合は、身元を証明するためのリクエストを提出する必要があります。</p>
+                        <h2>賭けの規制</h2>
+                        <p>賭けが受け入れられ、確認されたプレーヤーアカウントプレーヤーは、賭けをする前にデポジットする必要があります。プレーヤーが正常にデポジットまたは転送に成功していないことが判明した場合、アカウントの賭けは無効と見なされます。</p>
+                        <h2>賭けを確認する</h2>
+                        <p>当ウェブサイト上での賭けに成功した後は、解約することはできません。また、和解に応じて、賭けが無効または不一致の結果などをお客様に通知することによってのみ、賭けをキャンセルすることができます。ルール。</p>
+                        <h2>賭け記録の正確さ</h2>
+                        <p>あなたの賭けの正確さを確認してください、あなたがこのウェブサイトに賭けをするとき、我々は誤りまたは脱落に対して責任がありません。</p>
+                        <h2>賭けの控除/未決済の賭け</h2>
+                        <p>賭けはあなたの賭けの時に差し引かれ、結果に関係なく、賭けられたが引き出されなかった賭けに対しては返金されません。ゲームが完全に終了した後、賭け金と賞金は決済されます。要件が満たされている場合、支払い金額はすぐにメンバーのアカウントに入金されます。</p>
+                        <h2>ベット分布</h2>
+                        <p>賞金は各プレイヤーのアカウントに自動的に分配されます。アカウントの更新された賞金は、利益または譲渡の基礎として使用されません。監査中に顧客がアカウントを欺いたり悪用したことが判明した場合、当社はその一部を留保します。賞金はキャンセルされ、各メンバーのアカウントの残高を順番に修正する権限があります。</p>
+                        <h2>ボーナスに対するメンバーの責任</h2>
+                        <p>賞金に起因する税金またはその他の料金は、会員自身が負担するものとします。当社は、関連する法的規定を遵守し、会員の口座の残高を差し控え、会員に通知します。賞金を譲渡、代用、または他の賞金を請求​​するために使用することはできません。</p>
+                        <h2>ベット</h2>
+                        <p>
+                            最小ベット
+                            <br>
+                            最小ベットは、さまざまなゲームによって異なります。すべてのゲームで動作します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" a href="#"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='../html/event.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='../html/vip.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 無断転載禁止 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="jumpWindow betWindow sportGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">36588</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow liveGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">ALLBET</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>歐博真人</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow liveGame02">
+            <i class="close_ic"></i>
+            <div class="betTitle">WM</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>WM真人</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow lotteryGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">SG</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>SG彩票</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow lotteryGame02">
+            <i class="close_ic"></i>
+            <div class="betTitle">GS</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>GS彩票</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow slotGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">老虎機</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow fishGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">捕魚機</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>BNG電子娛樂</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow boardGame01">
+            <i class="close_ic"></i>
+            <div class="betTitle">棋牌遊戲</div>
+            <form>
+                <div class="row">
+                    <p>中心錢包</p>
+                    <input type="text" value="$9999">
+                </div>
+                <div class="row">
+                    <i class="trans_arrow"></i>
+                </div>
+                <div class="row">
+                    <p>鳳凰棋牌</p>
+                    <input type="text" value="$0">
+                </div>
+                <div class="row">
+                    <p>轉帳金額</p>
+                    <input type="text" value="$100">
+                </div>
+                <div class="row forBtn">
+                    <div class="btnBox">
+                        <button>$100</button>
+                        <button>$500</button>
+                        <button>$1000</button>
+                        <button>$3000</button>
+                        <button>$5000</button>
+                        <button>$10000</button>
+                        <button>全部</button>
+                    </div>
+                </div>
+                <div class="row forBtn">
+                    <button class="check">確認</button>
+                </div>
+            </form>
+            <div class="enterGame">
+                <button>進入遊戲</button>
+            </div>
+        </div>
+        <div class="jumpWindow score">
+            <div class="title">
+                <p>查看積分</p>
+                <i class="close_ic"></i>
+            </div>
+            <div class="total">
+                當前積分
+                <p>8,898,888</p>
+            </div>
+            <ul>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="name">BNG老虎機</div>
+                    <div class="point">
+                        3500000
+                        <div class="notice">
+                            <p>
+                                1投注 = 3.5積分
+                                <i></i>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

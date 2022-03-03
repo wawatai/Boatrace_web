@@ -1,0 +1,154 @@
+footer {
+    width: 100%;
+    height: auto;
+    background: $backgroundColor_1;
+
+    //上部
+    .top {
+        width: 100%;
+        height: 80px;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+            button {
+                width: 25px;
+                height: 100%;
+                position: relative;
+                background: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 18px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+
+                &.next {
+                    
+                    &::before {
+                        transform: translate(-50%,-50%) scaleX(-1);
+                    }
+                }
+            }
+
+            .partnerBox {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+
+                .partners {
+                    display: flex;
+                    width: auto;
+                    height: 100%;
+                    align-items: center;
+                    transition: 0.6s ease;
+
+                    i {
+                        width: 170px;
+                        height: 55px;
+                        margin: 0 10px;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+
+    //下部
+    .footerList {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        .center {
+            width: 100%;
+            height: 55px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: inset 0 0 7px 0 $backgroundColor_5;
+            color: $fontColor_1;
+            background: $backgroundColor_2;
+
+            ul {
+                width: 1200px;
+                height: 55px;
+                margin: auto;
+                align-items: center;
+                display: flex;
+                position: relative;
+
+                li {
+                    width: auto;
+                    height: 0;
+                    padding: 20px;
+                    margin-right: 9px;
+                    line-height: 0;
+                    cursor: pointer;
+                    color: #fff;
+                    position: relative;
+
+                    &:hover,&.active,&.active {
+                        background:$backgroundColor_1;
+                        color: $fontColor_3;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -20px;
+                            width: 0;
+                            height: 0;
+                            border-color: transparent #fff;
+                            border-style: solid;
+                            border-width: 20px 0 20px 20px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%) rotate(45deg);
+                            left: -18px;
+                            width: 30px;
+                            height: 30px;
+                            background: #0d73dc;
+                            border: 1px solid #fff;
+                        }
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                        pointer-events: none;
+                        width: auto;
+                    }
+                }
+
+                .pright {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        .footer-site {
+            height: 105px;
+            padding: 30px;
+            font-size: 14px;
+            line-height: 42px;
+            text-align: center;
+            color: $fontColor_2;
+            margin: auto;
+        }
+    }
+}

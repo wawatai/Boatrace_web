@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <header>
+        <div class="top">
+            <span class="brad">
+                TONG BOU
+                <span class="time"></span>
+            </span>
+            <ul class="user userInfo">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password" placeholder="パスワード">
+                            <i class="forget"></i>
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn active" onclick="window.location.href='./mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="../images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu" onclick="window.location.href='../index.html'"> ホーム </li>
+                    <li class="saleBtn" onclick="window.location.href='./event.html'"> プロモーション </li>
+                    <li class="vipBtn" onclick="window.location.href='./vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="window.open('http://race-web.race99.net/events/bet3t')"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="innerPage">
+            <div class="marqueeArea">
+                <div class="center">
+                    <div class="marqueeWrap">
+                        <i class="marquee_ic"></i>
+                        <div class="marquee">
+                            <pre>
+                                <p>読売新聞社杯　全日本王座決定戦　開設６９周年記念</p>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <aside class="innerSide">
+                    <div class="userInfo">
+                        <div>
+                            <p class="account">
+                                bbb123
+                                <span class="lv">VIP20</span>
+                            </p>
+                            <p class="days">參加45日</p>
+                            <ul class="quickSelect">
+                                <li onclick="window.location.href='./deposit.html'">
+                                    <p class="btn">入</p>
+                                    <span>入金</span>
+                                </li>
+                                <li onclick="window.location.href='./withdrawal.html'">
+                                    <p class="btn">出</p>
+                                    <span>出金</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="innerNav">
+                        <li onclick="window.location.href='./member.html'">
+                            <i class="user_ic"></i>
+                            個人情報
+                        </li>
+                        <li onclick="window.location.href='./vip.html'">
+                            <i class="vip_ic"></i>
+                            VIPメンバー
+                        </li>
+                        <li onclick="window.location.href='./wallet.html'">
+                            <i class="wallet_ic"></i>
+                            マイウォレット
+                        </li>
+                        <li onclick="window.location.href='./bankCard.html'">
+                            <i class="card_ic"></i>
+                            銀行口座
+                        </li>
+                        <li onclick="window.location.href='./dealRecord.html'">
+                            <i class="dealRecord_ic"></i>
+                            取引履歷
+                        </li>
+                        <li onclick="window.location.href='./eventApply.html'">
+                            <i class="event_ic"></i>
+                            プロモーション申請
+                        </li>
+                        <li class="active"onclick="window.location.href='./mail.html'">
+                            <i class="mail_ic"></i>
+                            インボックス
+                        </li>
+                    </ul>
+                </aside>
+                <section>
+                    <div class="mailWrap outMode display">
+                        <div class="top">
+                            <p>インボックス</p>
+                            <div>
+                                <a href="#" class="active">メッセージ</a>
+                                <a href="#">お知らせ</a>
+                            </div>
+                        </div>
+                        <form class="bottom active display">
+                            <ul class="tabs">
+                                <li class="active"> システムインフォメーション </li>
+                                <li> プライベート・メッセージ </li>
+                            </ul>
+                            <div class="list">
+                                <div class="btnBox nor display">
+                                    <a href="#">全て既読</a>
+                                    <a href="#" class="edit">編集</a>
+                                </div>
+                                <div class="btnBox edit">
+                                    <span>
+                                        <span class="all">
+                                            <input type="checkbox">
+                                            全て
+                                        </span>
+                                        <a href="#">読んだ</a>
+                                        <a href="#">消去</a>
+                                    </span>
+                                    <a href="#" class="finish">終了</a>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <span class="title">ルーキーシリーズ第２戦スカパー！・ＪＬＣ杯</span>
+                                        <span class="date">~</span>
+                                    </li>
+                                    <li>
+                                        <span class="title">ルーキーシリーズ第２戦スカパー！・ＪＬＣ杯</span>
+                                        <span class="date">~</span>
+                                    </li>
+                                    <li>
+                                        <span class="title">ルーキーシリーズ第２戦スカパー！・ＪＬＣ杯</span>
+                                        <span class="date">~</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                        <form class="bottom ann">
+                            <ul class="tabs">
+                                <li class="active">人気</li>
+                                <li>ノーマル</li>
+                                <li>入金</li>
+                            </ul>
+                            <div class="list">
+                                <div class="btnBox display"></div>
+                                <ul>
+                                    <li>
+                                        <span class="title">人気のアナウンステスト</span>
+                                        <span class="date">~</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mailWrap innerMode">
+                        <p class="title">
+                            <button>
+                                <i class="arrow_ic"></i>
+                                インボックス
+                            </button>
+                        </p>
+                        <div class="msgTitle">
+                            <span></span>
+                            <button class="prev"></button>
+                            <button class="next"></button>
+                        </div>
+                        <p class="date">2020-09-14 18:23:42</p>
+                        <hr>
+                        <div class="msg">
+                            ルーキーシリーズ第２戦スカパー！・ＪＬＣ杯
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" a href="#"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='../html/event.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='../html/vip.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 無断転載禁止 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.25">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="../js/javascript.js"></script>
+</head>
+<body onload="currentTime()">
+    <header>
+        <div class="top">
+            <span class="brad">
+                TONG BOU
+                <span class="time"></span>
+            </span>
+            <ul class="user userInfo">
+                <li class="loginPart">
+                    <form class="loginForm">
+                        <div>
+                            <i></i>
+                            <input type="text" placeholder="アカウントまたは携帯電話番号を入力して">
+                        </div>
+                        <div>
+                            <i></i>
+                            <input type="password" placeholder="パスワード">
+                            <i class="forget"></i>
+                        </div>
+                        <button class="loginBtn" type="button">登録 </button>
+                        <button class="loginPart register" onclick="window.open('./html/register.html')" type="button">ログイン</button>
+                    </form>
+                </li>
+                <li class="infoPart">
+                    <span class="lv">nt5_test01</span>
+                    <span class="useRname">userName</span>
+                </li>
+                <li class="infoPart moneyTotal">
+                    <span class="total">9999</span>
+                    <i class="money_arrow"></i>
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./deposit.html'">
+                    入金 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./withdrawal.html'">
+                    出金 
+                </li>
+                <li class="infoPart infoBtn active" onclick="window.location.href='./member.html'">
+                    マイページ 
+                </li>
+                <li class="infoPart infoBtn" onclick="window.location.href='./mail.html'">
+                    インボックス
+                </li>
+                <li class="infoPart logoutBtn" onclick="window.location.href='../index.html'">
+                    ログアウト 
+                </li>
+                <li class="lang">
+                    <select>
+                        <option>日本語</option>
+                        <option>简体中文</option>
+                        <option>ENGLISH</option>
+                        <option>繁體中文</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="gameNav">
+            <div class="center">
+                <img class="logo" src="../images/icon/svg/logo.svg">
+                <ul>
+                    <li class="menu" onclick="window.location.href='../index.html'"> ホーム </li>
+                    <li class="saleBtn" onclick="window.location.href='./event.html'"> プロモーション </li>
+                    <li class="vipBtn" onclick="window.location.href='./vip.html'"> VIPメンバー </li>
+                    <li class="gameBtn" onclick="window.open('http://race-web.race99.net/events/bet3t')"> ゲームスタート </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="header"></div>
+    <main>
+        <div class="innerPage">
+            <div class="marqueeArea">
+                <div class="center">
+                    <div class="marqueeWrap">
+                        <i class="marquee_ic"></i>
+                        <div class="marquee">
+                            <pre>
+                                <p>読売新聞社杯　全日本王座決定戦　開設６９周年記念</p>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <aside class="innerSide">
+                    <div class="userInfo">
+                        <div>
+                            <p class="account">
+                                bbb123
+                                <span class="lv">VIP20</span>
+                            </p>
+                            <p class="days">參加45日</p>
+                            <ul class="quickSelect">
+                                <li onclick="window.location.href='./deposit.html'">
+                                    <p class="btn">入</p>
+                                    <span>入金</span>
+                                </li>
+                                <li onclick="window.location.href='./withdrawal.html'">
+                                    <p class="btn">出</p>
+                                    <span>出金</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="innerNav">
+                        <li class="active" onclick="window.location.href='./member.html'">
+                            <i class="user_ic"></i>
+                            個人情報
+                        </li>
+                        <li class="" onclick="window.location.href='./vip.html'">
+                            <i class="vip_ic"></i>
+                            VIPメンバー
+                        </li>
+                        <li onclick="window.location.href='./wallet.html'">
+                            <i class="wallet_ic"></i>
+                            マイウォレット
+                        </li>
+                        <li onclick="window.location.href='./bankCard.html'">
+                            <i class="card_ic"></i>
+                            銀行口座
+                        </li>
+                        <li onclick="window.location.href='./dealRecord.html'">
+                            <i class="dealRecord_ic"></i>
+                            取引履歷
+                        </li>
+                        <li onclick="window.location.href='./eventApply.html'">
+                            <i class="event_ic"></i>
+                            プロモーション申請
+                        </li>
+                        <li onclick="window.location.href='./mail.html'">
+                            <i class="mail_ic"></i>
+                            インボックス
+                        </li>
+                    </ul>
+                </aside>
+                <section>
+                    <div class="memberWrap">
+                        <div class="top">
+                            <h1>個人情報</h1>
+                            <div class="content">
+                                <p>
+                                    アカウントのセキュリティレベル：
+                                    <em class="low">低</em>
+                                </p>
+                                <p class="remind">アカウントのセキュリティを確保するために、必要に応じて関連するセキュリティ情報を入力してください</p>
+                                <ul class="level">
+                                    <li class="active">
+                                        <i class="data_ic"></i>
+                                        基本情報を入力してください 
+                                    </li>
+                                    <li>
+                                        <i class="phone_ic"></i>
+                                        携帯電話番号を連携してください 
+                                    </li>
+                                    <!-- <li>
+                                        <i class="bankcard_ic"></i>
+                                        添加銀行卡
+                                    </li> -->
+                                    <li>
+                                        <i class="mail_ic"></i>
+                                        Eメールを入力してください 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <ul class="tabs">
+                                <li class="active">基本情報</li>
+                            </ul>
+                            <div>
+                                <div class="dataWrap display">
+                                    <div class="content">
+                                        <h1>基本情報</h1>
+                                        <ul class="fakeTable">
+                                            <li class="left">
+                                                <form>
+                                                    <ul>
+                                                        <li>
+                                                            <label>
+                                                                <em></em>
+                                                                お名前
+                                                            </label>
+                                                            <input type="text" value="">
+                                                            <p class="remind">名前は銀行口座所有者の名前と同じである必要があります。同じでない場合、出金はできません。</p>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <em></em>
+                                                                誕生日
+                                                            </label>
+                                                            <input type="date">
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                連絡先番号
+                                                            </label>
+                                                            <input type="text" value="0800123456" readonly>
+                                                            <button type="button" class="modify-phone"> 変更 </button>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <em></em>
+                                                                Eメール
+                                                            </label>
+                                                            <input type="text">
+                                                            <button type="button" class="modify-email"> 変更 </button>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                住所
+                                                            </label>
+                                                            <input type="text">
+                                                            <p class="remind"> スペース、記号などを禁止します</p>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <em></em>
+                                                                LINE
+                                                            </label>
+                                                            <input type="text">
+                                                            <button type="button" class="modify-line"> 変更 </button>
+                                                            <p class="remind">Line IDまたはWeChat IDのいずれかを入力できます</p>
+                                                        </li>
+                                                        <li>
+                                                            <label>
+                                                                <em></em>
+                                                                WeChat
+                                                            </label>
+                                                            <input type="text">
+                                                            <p class="remind">Line IDまたはWeChat IDのいずれかを入力できます</p>
+                                                        </li>
+                                                    </ul>
+                                                </form>
+                                            </li>
+                                            <li class="right">
+                                                <ul>
+                                                    <li>
+                                                        <label>アカウント</label>
+                                                        <p>bbb123</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <p class="remind np">
+                                            基本的な情報が間違っていますか？
+                                            <button>カスタマーサービスにお問い合わせください</button>
+                                        </p>
+                                    </div>
+                                    <div class="changePassword">
+                                        <h1>修改密碼</h1>
+                                        <ul>
+                                            <li>
+                                                <label>帳戶密碼</label>
+                                                <input type="text" value="******">
+                                                <button> 変更 </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="rightSide">
+                        <div class="smallBoard">
+                            <div class="title">
+                                プロモーション
+                                <p class="more" onclick="window.location.href='./eventApply.html'">
+                                もっと
+                                    <i class="arrow"></i>
+                                </p>
+                            </div>
+                            <ul class="list">
+                                <div class="_list_Tx">
+                                    流水をテストするための割引
+                                </div>
+                               
+                            </ul>
+                        </div>
+                    </aside>
+                </section>
+            </div>
+        </div>
+    </main>
+    <nav class="sideBar">
+        <p class="download" a href="#">
+            <i></i>
+            携帯ダウンロード
+        </p>
+        <ul class="rightSide">
+            <li class="callCenter" a href="#"><i></i></li>
+            <li class="line" a href="#"><i></i></li>
+        </ul>
+    </nav>
+    <footer>
+        <div class="footerList">
+            <div class="center">
+                <ul>
+                    <li class="title openNews">最新のお知らせ </li>
+                    <li class="title" onclick="window.location.href='../html/event.html'">ボーナス</li>
+                    <li class="title" onclick="window.location.href='../html/vip.html'">VIP</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">ヘルプ​センター</li>
+                    <li class="title" onclick="window.location.href='../html/help.html'">当社について</li>
+                    <li class="pright">2021 nt5-web.local 版權所有 │ 18+</li>
+                </ul>
+            </div>
+            <div class="footer-site"><div class="center-wrap"><pre>アフィリエイトは業界でも人気のアフィリエイトプログラムを提供しています。
+                アフィリエイター様と「相互メリット」を原則として、より良いパートナーシップの構築と維持に尽力致します。ぜひ、一緒に を成長させてともに利益を分け合いましょう。</pre></div>
+            </div>
+        </div>
+    </footer>
+    <div class="filter">
+        <div class="jumpWindow news">
+            <div class="title">
+                <p>最新のお知らせ</p>
+                <i class="close_ic"></i>
+            </div>
+            <ul class="nav">
+                <li class="hot active">人気</li>
+                <li class="normal">一般的</li>
+                <li class="deposit">保証金</li>
+            </ul>
+            <ul class="content forHot display">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forNormal">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="content forDeposit">
+                <li>
+                    <div>
+                        <p class="text">アナウンステスト</p>
+                        <!-- <p class="date">2021/09/26</p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="jumpWindow passwordWindow">
+            <div class="title">
+                <p>提示</p>
+                <i class="close_ic"></i>
+            </div>
+            <form>
+                <div class="content">
+                    <ul>
+                        <li><input type="password" placeholder="旧パスワード"></li>
+                        <li><input type="password" placeholder="新しいパスワード"></li>
+                        <li><input type="password" placeholder="パスワードを確認"></li>
+                    </ul>
+                </div>
+                <div class="btnBox">
+                    <button>確認</button>
+                </div>
+            </form>
+        </div>
+        <div class="jumpWindow changeBTNWindow">
+            <div class="title">
+                <p>提示</p>
+                <i class="close_ic"></i>
+            </div>
+            <form>
+                <div class="content">
+                    <ul>
+                        <li> 元の番号 : 0987654329 </li>
+                        <li><input type="password" placeholder="新しい電話番号を入力してください"></li>
+                    </ul>
+                </div>
+                <div class="btnBox">
+                    <button>確認</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
